@@ -1,0 +1,50 @@
+:root {
+  background-color: #131515;
+  color: #51FFFF;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#page-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#aquapants-header {
+  margin: 1em;
+  padding-bottom: 1em;
+}
+
+#aquapants-header h1 {
+  font-family: "Slackey", "Helvetica", "Arial";
+  font-style: italic;
+  font-variant: small-caps;
+  font-size: 5em;
+  line-height: 1em;
+  margin-bottom: 0;
+}
+
+#aquapants-header p {
+  margin: 0;
+  float: right;
+  font-family: "Palanquin Dark"
+}
+
+q {
+  font-family: "Crimson Text";
+  font-style: italic;
+}
