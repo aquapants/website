@@ -41,6 +41,7 @@ body {
 #aquapants-header p {
   margin: 0;
   float: right;
+  color: #FFFAFB;
   font-family: "Palanquin Dark"
 }
 
@@ -50,6 +51,7 @@ q {
   font-size: 1.2em;
 }
 
+
 @media screen and (max-width: 620px) {
   #aquapants-header h1 {
     font-size: 2.5em;
@@ -58,4 +60,18 @@ q {
   q {
     font-size: 1em;
   }
+}
+
+#links {
+  background-color: #FFA69E;
+  border-radius: 100%;
+  padding: 0.5em;
+}
+
+#links a {
+  display: flex;
+}
+
+#links a:hover img {
+  transform: translate3d(0, -.2em, 0);
 }
