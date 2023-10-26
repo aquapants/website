@@ -1,0 +1,100 @@
+:root {
+  background-color: #131515;
+  color: #51FFFF;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#page-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#aquapants-header {
+  margin: 1em;
+  padding-bottom: 1em;
+}
+
+#aquapants-header h1 {
+  font-family: "Slackey", "Helvetica", "Arial";
+  font-style: italic;
+  font-variant: small-caps;
+  font-size: 5em;
+  line-height: 1em;
+  margin-bottom: 0;
+}
+
+#aquapants-header p {
+  margin: 0;
+  float: right;
+  color: #FFFAFB;
+  font-family: "Palanquin Dark";
+  /* todo: choose alt fonts */
+}
+
+#aquapants-quote {
+  margin-bottom: 1.5em;
+}
+
+#aquapants-quote q {
+  font-family: "Crimson Text";
+  /* todo: choose alt fonts */
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+
+@media screen and (max-width: 620px) {
+  #aquapants-header h1 {
+    font-size: 2.5em;
+  }
+
+  q {
+    font-size: 1em;
+  }
+}
+
+#links-background {
+  background-color: #FFA69E;
+  --links-background-skewX: 15deg;
+  --links-background-skewY: 5deg;
+  --links-background-scaleX: 1.3;
+  --links-background-scaleY: 1;
+  /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+  transform: scale(var(--links-background-scaleX), var(--links-background-scaleY)) skew(var(--links-background-skewX), var(--links-background-skewY));
+}
+
+#links {
+  padding: 0.7em 0.8em;
+  /* Counteract the background transform */
+  transform: skew(calc(var(--links-background-skewX)*-1), calc(var(--links-background-skewY)*-1)) scale(calc(1/var(--links-background-scaleX)), calc(1/var(--links-background-scaleY)));
+  display: flex;
+  flex-direction: row;
+}
+
+#links #github-link {
+  margin-right: 0.8em;
+}
+
+#links a {
+  display: flex;
+
+}
+
+#links a:hover img {
+  transform: translate3d(0, -.2em, 0);
+}
