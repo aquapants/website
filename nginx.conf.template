@@ -36,7 +36,7 @@ http {
     #gzip  on;
 
     server {
-        listen       80;
+        listen       ${PORT};
         server_name  *.aquapants.org;
 
         #charset koi8-r;
