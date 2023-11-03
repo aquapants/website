@@ -43,10 +43,12 @@ body {
   float: right;
   color: #FFFAFB;
   font-family: "Palanquin Dark";
+  font-size: 1.2em;
   /* todo: choose alt fonts */
 }
 
 #aquapants-quote {
+  margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
@@ -60,10 +62,18 @@ body {
 
 @media screen and (max-width: 620px) {
   #aquapants-header h1 {
-    font-size: 2.5em;
+    font-size: 3.2em;
   }
 
-  q {
+  #aquapants-header p {
+    font-size: 1.2em;
+  }
+
+  #aquapants-quote {
+    margin-top: 0px;
+  }
+
+  #aquapants-quote q {
     font-size: 1em;
   }
 }
