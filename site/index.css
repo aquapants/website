@@ -15,6 +15,19 @@ body {
   flex-grow: 1;
 }
 
+/*Add quote*/
+q {
+  quotes: '"' '"';
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+
 #page-container {
   display: flex;
   flex-grow: 1;
@@ -43,7 +56,7 @@ body {
   float: right;
   color: #FFFAFB;
   font-family: "Palanquin Dark";
-  font-size: 1.2em;
+  font-size: 1.1em;
   /* todo: choose alt fonts */
 }
 
@@ -56,17 +69,12 @@ body {
   font-family: "Crimson Text";
   /* todo: choose alt fonts */
   font-style: italic;
-  font-size: 1.2em;
 }
 
-
+/*Mobile landscape mode*/
 @media screen and (max-width: 620px) {
   #aquapants-header h1 {
-    font-size: 3.2em;
-  }
-
-  #aquapants-header p {
-    font-size: 1.2em;
+    font-size: 3.5em;
   }
 
   #aquapants-quote {
@@ -75,6 +83,20 @@ body {
 
   #aquapants-quote q {
     font-size: 1em;
+  }
+}
+
+/*Mobile portrait mode*/
+@media screen and (max-width: 425px) {
+  #aquapants-header h1 {
+    font-size: 2.5em;
+  }
+
+  #aquapants-header q {
+    font-size: 1.1em;
+  }
+  #aquapants-quote q {
+    font-size: 0.9em;
   }
 }
 
