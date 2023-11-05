@@ -15,19 +15,6 @@ body {
   flex-grow: 1;
 }
 
-/*Add quote*/
-q {
-  quotes: '"' '"';
-}
-
-q::before {
-  content: open-quote;
-}
-
-q::after {
-  content: close-quote;
-}
-
 #page-container {
   display: flex;
   flex-grow: 1;
@@ -71,8 +58,8 @@ q::after {
   font-style: italic;
 }
 
-/*Mobile landscape mode*/
-@media screen and (max-width: 620px) {
+/*Tablet size*/
+@media screen and (max-height: 768px) {
   #aquapants-header h1 {
     font-size: 3.5em;
   }
@@ -80,23 +67,33 @@ q::after {
   #aquapants-quote {
     margin-top: 0px;
   }
+}
+
+/*Mobile L size*/
+@media screen and (max-width: 425px) {
+  #aquapants-header h1 {
+    font-size: 2.6em;
+  }
+
+  #aquapants-header p {
+    font-size: 0.9em;
+  }
 
   #aquapants-quote q {
-    font-size: 1em;
+    font-size: 0.9em;
+    margin-left: 0.5em;
   }
 }
 
-/*Mobile portrait mode*/
-@media screen and (max-width: 425px) {
+/*Mobile S size*/
+@media screen and (max-width: 320px) {
   #aquapants-header h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
-  #aquapants-header q {
-    font-size: 1.1em;
-  }
   #aquapants-quote q {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    margin-left: 0.5em;
   }
 }
 
