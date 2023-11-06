@@ -48,8 +48,7 @@ body {
 }
 
 #aquapants-quote {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin: 1.5em;
 }
 
 #aquapants-quote q {
@@ -59,7 +58,7 @@ body {
 }
 
 /*Tablet size*/
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 768px) {
   #aquapants-header h1 {
     font-size: 3.5em;
   }
@@ -81,7 +80,6 @@ body {
 
   #aquapants-quote q {
     font-size: 0.9em;
-    margin-left: 0.5em;
   }
 }
 
@@ -93,7 +91,6 @@ body {
 
   #aquapants-quote q {
     font-size: 0.8em;
-    margin-left: 0.5em;
   }
 }
 
