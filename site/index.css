@@ -43,28 +43,54 @@ body {
   float: right;
   color: #FFFAFB;
   font-family: "Palanquin Dark";
+  font-size: 1.1em;
   /* todo: choose alt fonts */
 }
 
 #aquapants-quote {
-  margin-bottom: 1.5em;
+  margin: 1.5em;
 }
 
 #aquapants-quote q {
   font-family: "Crimson Text";
   /* todo: choose alt fonts */
   font-style: italic;
-  font-size: 1.2em;
 }
 
-
-@media screen and (max-width: 620px) {
+/*Tablet size*/
+@media screen and (max-width: 768px) {
   #aquapants-header h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
   }
 
-  q {
-    font-size: 1em;
+  #aquapants-quote {
+    margin-top: 0px;
+  }
+}
+
+/*Mobile L size*/
+@media screen and (max-width: 425px) {
+  #aquapants-header h1 {
+    font-size: 2.6em;
+  }
+
+  #aquapants-header p {
+    font-size: 0.9em;
+  }
+
+  #aquapants-quote q {
+    font-size: 0.9em;
+  }
+}
+
+/*Mobile S size*/
+@media screen and (max-width: 320px) {
+  #aquapants-header h1 {
+    font-size: 2em;
+  }
+
+  #aquapants-quote q {
+    font-size: 0.8em;
   }
 }
 
