@@ -2,7 +2,7 @@ services:
   frontend:
     build:
       args:
-        HOST: dev.aquapants.org
+        HOST: aquapants.org
         PORT: 80
       context: .
       dockerfile: Dockerfile
