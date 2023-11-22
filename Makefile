@@ -1,5 +1,5 @@
 build:
-	docker compose -f dev.docker-compose.yaml build
+	docker compose -f docker-compose.dev.yaml build
 
 dev:
-	docker compose -f dev.docker-compose.yaml up --build --renew-anon-volumes
+	docker compose -f docker-compose.dev.yaml up --build --renew-anon-volumes
