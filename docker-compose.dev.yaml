@@ -6,6 +6,7 @@ services:
         PORT: 80
       context: .
       dockerfile: Dockerfile
+    image: us-central1-docker.pkg.dev/aquapants-website/website/site-dev
     container_name: aquapants-website-frontend
     restart: always
     volumes:
