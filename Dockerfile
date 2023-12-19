@@ -3,7 +3,8 @@ FROM nginx:alpine
 # >>> NGINX >>>
 ARG HOST
 ARG PORT
-COPY nginx/templates/nginx.conf /etc/nginx/templates
+COPY nginx/nginx.conf /etc/nginx.conf
+COPY nginx/templates/* /etc/nginx/templates/
 # <<< NGINX <<<
 
 # >>> SITE >>>
