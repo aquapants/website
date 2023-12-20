@@ -1,0 +1,20 @@
+log_format logger-json-log escape=json '{'
+    '"body_bytes_sent":"$body_bytes_sent",'
+    '"bytes_sent":"$bytes_sent",'
+    '"http_host":"$http_host",'
+    '"msec":"$msec",'
+    '"remote_addr":"$remote_addr",'
+    '"request_length":"$request_length",'
+    '"request_method":"$request_method",'
+    '"request_uri":"$request_uri",'
+    '"scheme":"$scheme",'
+    '"server_port":"$server_port",'
+    '"server_protocol":"$server_protocol",'
+    '"ssl_protocol":"$ssl_protocol",'
+    '"status":"$status",'
+    '"upstream_response_time":"$upstream_response_time",'
+    '"upstream_addr":"$upstream_addr",'
+    '"upstream_connect_time":"$upstream_connect_time",'
+'}';
+
+access_log  /dev/stdout  logger-json-log;
