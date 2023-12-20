@@ -1,5 +1,5 @@
 .PHONY: deploy-prod testing deploy-testing build-push-testing build-testing \
-				push build dev
+				push build dev fmt
 
 deploy-prod:
 	gcloud run deploy website --image us-central1-docker.pkg.dev/aquapants-website/website/site --region us-central1
@@ -23,3 +23,6 @@ build:
 
 dev:
 	docker compose -f docker-compose.dev.yaml up --build --renew-anon-volumes
+
+fmt:
+	yarn prettier --write .
