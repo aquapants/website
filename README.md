@@ -4,6 +4,11 @@
 
 The aquapants.org website!
 
+## Setup
+
+1. [Install Node.js](https://nodejs.org/en)
+2. [Install yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
+
 ## Development
 
 1. `make dev`
