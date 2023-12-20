@@ -25,4 +25,4 @@ dev:
 	docker compose -f docker-compose.dev.yaml up --build --renew-anon-volumes
 
 fmt:
-	npx prettier . --write
+	yarn prettier --write .
