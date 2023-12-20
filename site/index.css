@@ -1,6 +1,6 @@
 :root {
   background-color: #131515;
-  color: #51FFFF;
+  color: #51ffff;
 }
 
 html {
@@ -41,7 +41,7 @@ body {
 #aquapants-header p {
   margin: 0;
   float: right;
-  color: #FFFAFB;
+  color: #fffafb;
   font-family: "Palanquin Dark";
   font-size: 1.1em;
   /* todo: choose alt fonts */
@@ -95,19 +95,30 @@ body {
 }
 
 #links-background {
-  background-color: #FFA69E;
+  background-color: #ffa69e;
   --links-background-skewX: 15deg;
   --links-background-skewY: 5deg;
   --links-background-scaleX: 1.3;
   --links-background-scaleY: 1;
   /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
-  transform: scale(var(--links-background-scaleX), var(--links-background-scaleY)) skew(var(--links-background-skewX), var(--links-background-skewY));
+  transform: scale(
+      var(--links-background-scaleX),
+      var(--links-background-scaleY)
+    )
+    skew(var(--links-background-skewX), var(--links-background-skewY));
 }
 
 #links {
   padding: 0.7em 0.8em;
   /* Counteract the background transform */
-  transform: skew(calc(var(--links-background-skewX)*-1), calc(var(--links-background-skewY)*-1)) scale(calc(1/var(--links-background-scaleX)), calc(1/var(--links-background-scaleY)));
+  transform: skew(
+      calc(var(--links-background-skewX) * -1),
+      calc(var(--links-background-skewY) * -1)
+    )
+    scale(
+      calc(1 / var(--links-background-scaleX)),
+      calc(1 / var(--links-background-scaleY))
+    );
   display: flex;
   flex-direction: row;
 }
@@ -118,9 +129,8 @@ body {
 
 #links a {
   display: flex;
-
 }
 
 #links a:hover img {
-  transform: translate3d(0, -.2em, 0);
+  transform: translate3d(0, -0.2em, 0);
 }
