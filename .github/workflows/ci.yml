@@ -13,11 +13,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install prettier
-        run: npm install --save-dev --save-exact prettier
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ${{ github.workspace }}/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
 
-      - name: Run prettier check
-        run: npx prettier . --check
+      - name: yarn install
+        run: yarn install
 
-        
-      
+      - name: Check formatting
+        run: |
+          yarn prettier --check .
