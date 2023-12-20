@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  pull_request:
+    branches: main
+
+jobs:
+  prettier:
+    name: 💅 prettier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install prettier
+        run: npm install --save-dev --save-exact prettier
+
+      - name: Run prettier check
+        run: npx prettier . --check
+
+        
+      
