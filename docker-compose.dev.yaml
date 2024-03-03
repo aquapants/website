@@ -2,11 +2,11 @@ services:
   frontend:
     build:
       args:
-        HOST: dev.aquapants.org
+        HOST: aquapants-local-testing.org
         PORT: 80
       context: .
       dockerfile: Dockerfile
-    image: us-central1-docker.pkg.dev/aquapants-website/website/site-dev
+    image: silly-willy:latest
     container_name: aquapants-website-frontend
     restart: always
     volumes:
